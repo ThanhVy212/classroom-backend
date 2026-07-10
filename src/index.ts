@@ -9,6 +9,7 @@ import securityMiddleware from "./middleware/security.js";
 import subjectsRouter from "./routes/subject.js";
 import usersRouter from "./routes/user.js";
 import classesRouter from "./routes/class.js"
+import departmentsRouter from "./routes/department.js"
 
 import {auth} from "./lib/auth.js";
 
@@ -32,6 +33,7 @@ app.use(securityMiddleware);
 app.use('/api/subjects', subjectsRouter);
 app.use('/api/users', usersRouter);
 app.use('/api/classes', classesRouter);
+app.use('/api/departments', departmentsRouter);
 
 app.get("/", (req, res) => {
     res.send('Hello, Welcome to the Classroom API!');
